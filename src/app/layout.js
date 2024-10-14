@@ -14,21 +14,11 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body>
           <header>
-            <nav>
-              <ul style={{ display: "flex", gap: "1rem" }}>
-                <li>
-                  <Link href="/">Home</Link>
-                </li>
-                <li>
-                  <Link href="/profile">Profile</Link>
-                </li>
-                <li>
-                  <Link href="/global-timeline">Global Timeline</Link>
-                </li>
-                <li>
-                  <Link href="/notifications">Notifications</Link>
-                </li>
-              </ul>
+            <nav style={{ display: "flex", gap: "1rem" }}>
+              <Link href="/">Home</Link>
+              <Link href="/profile">Profile</Link>
+              <Link href="/global-timeline">Global Timeline</Link>
+              <Link href="/notifications">Notifications</Link>
             </nav>
           </header>
           <SignedOut>
@@ -38,9 +28,6 @@ export default function RootLayout({ children }) {
             <UserButton />
           </SignedIn>
           <main>{children}</main>
-          <footer>
-            <p>Collective-Kind - Building a kind and supportive community</p>
-          </footer>
         </body>
       </html>
     </ClerkProvider>
